@@ -4,7 +4,7 @@ import { UserButton } from "@clerk/clerk-react";
 export default function Dashboard({ params }: { params: { userId: string } }) {
   return (
     <div>
-      <UserButton />
+      <UserButton afterSignOutUrl="/" />
       <div>Dashboard</div>
     </div>
   );
