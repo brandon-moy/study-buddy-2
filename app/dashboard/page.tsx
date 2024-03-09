@@ -1,7 +1,7 @@
 "use client";
 import { UserButton } from "@clerk/clerk-react";
 
-export default function Dashboard({ params }: { params: { userId: string } }) {
+export default function Dashboard() {
   return (
     <div>
       <UserButton afterSignOutUrl="/" />
