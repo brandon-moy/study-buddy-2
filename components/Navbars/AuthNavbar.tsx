@@ -1,7 +1,7 @@
 import { UserButton, auth } from "@clerk/nextjs";
 import { redirect } from "next/navigation";
 
-const Navbar = async () => {
+const AuthNavbar = async () => {
   const { userId } = auth();
 
   if (!userId) {
@@ -19,4 +19,4 @@ const Navbar = async () => {
   );
 };
 
-export default Navbar;
+export default AuthNavbar;
