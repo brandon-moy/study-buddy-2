@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import { redirect } from "next/navigation";
 import "./globals.css";
 import { ClerkProvider, auth } from "@clerk/nextjs";
 
@@ -16,11 +15,6 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const { userId } = auth();
-
-  if (userId) {
-    redirect("/dashboard");
-  }
   return (
     <ClerkProvider>
       <html lang="en">
