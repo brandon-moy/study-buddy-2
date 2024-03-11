@@ -1,7 +1,6 @@
+import AuthNavbar from "@/components/Navbars/AuthNavbar";
 import { auth } from "@clerk/nextjs";
 import { redirect } from "next/navigation";
-
-import AuthNavbar from "@/components/Navbars/AuthNavbar";
 
 export default async function DashboardLayout({
   children,
