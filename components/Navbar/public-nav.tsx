@@ -14,6 +14,11 @@ const PublicNav = ({
   const params = useParams();
   const routes = [
     {
+      href: "/",
+      label: "Study Buddy 2",
+      active: pathname === "/",
+    },
+    {
       href: `/dashboard`,
       label: "Create Flashcards",
       active: pathname === `/dashboard`,

@@ -1,4 +1,3 @@
-import AuthNavbar from "@/components/Navbars/AuthNavbar";
 import { auth } from "@clerk/nextjs";
 import { redirect } from "next/navigation";
 
@@ -14,10 +13,5 @@ export default function DashboardLayout({
     redirect("/");
   }
 
-  return (
-    <>
-      <AuthNavbar />
-      {children}
-    </>
-  );
+  return <>{children}</>;
 }
