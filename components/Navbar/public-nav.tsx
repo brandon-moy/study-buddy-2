@@ -2,7 +2,7 @@
 
 import { cn } from "@/lib/utils";
 import Link from "next/link";
-import { useParams, usePathname } from "next/navigation";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 
 const PublicNav = ({
@@ -11,7 +11,6 @@ const PublicNav = ({
 }: React.HTMLAttributes<HTMLElement>) => {
   const [show, setShow] = useState(false);
   const pathname = usePathname();
-  const params = useParams();
   const routes = [
     {
       href: "/",
@@ -44,9 +43,9 @@ const PublicNav = ({
           >
             <path
               stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
               d="M1 1h15M1 7h15M1 13h15"
             />
           </svg>
@@ -55,7 +54,7 @@ const PublicNav = ({
           className={`${show ? "" : "hidden"} w-full md:block md:w-auto`}
           id="navbar-default"
         >
-          <ul className="absolute flex flex-col z-50 gap-y-4 w-[175px] h-[310px] sm:h-auto p-4 mt-4 font-medium bg-white border rounded-lg sm:relative md:p-0 md:flex-row md:space-x-8 md:mt-0 md:border-0 dark:bg-gray-800 dark:bg-gray-900 dark:border-gray-700 sm:bg-transparent sm:dark:bg-transparent">
+          <ul className="absolute flex flex-col z-50 gap-y-4 h-[310px] sm:h-auto p-4 mt-4 font-medium bg-white border rounded-lg sm:relative md:p-0 md:flex-row md:space-x-8 md:mt-0 md:border-0 dark:bg-gray-800 dark:bg-gray-900 dark:border-gray-700 sm:bg-transparent sm:dark:bg-transparent">
             {routes.map((route) => (
               <Link
                 onClick={() => setShow(false)}
